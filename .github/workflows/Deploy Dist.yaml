@@ -34,3 +34,9 @@ jobs:
               run: npm install
             - name: build project
               run: npm run build
+    deploy:
+        needs: build
+        runs-on: ubuntu-latest
+        steps: 
+            - name: Deploy Dist
+              run: echo 'Deployment completed'
