@@ -43,7 +43,7 @@ jobs:
         needs: build
         runs-on: ubuntu-latest
         steps:
-            - name: Download Dist Artifact
+            - name: Download Dist Artifac
               uses: actions/download-artifact@v4
               with: 
                    name: dist-files
