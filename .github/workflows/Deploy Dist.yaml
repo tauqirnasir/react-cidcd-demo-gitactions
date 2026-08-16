@@ -8,5 +8,6 @@ jobs:
             - name: Get Code
               run: |
                   echo "Cloning repo"
-                  git clone https://github.com/tauqirnasir/react-cidcd-demo-gitactions.git myfiles
+                  echo "${{toJson(github)}}"
+                  git clone https://github.com/${{github.repository}}.git myfiles
                   cd myfiles && ls
