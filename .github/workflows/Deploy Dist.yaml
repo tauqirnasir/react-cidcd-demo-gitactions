@@ -1,0 +1,12 @@
+name: Deploy Dist folder
+# on: [push,workflow_dispatch]
+on: push:
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Get Code
+                run: |
+                  echo "Cloning repo"
+                  https://github.com/tauqirnasir/react-cidcd-demo-gitactions.git myfiles
+                  cd myfiles && ls
